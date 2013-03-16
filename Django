@@ -1,0 +1,17 @@
+Setting up Django on MAC:
+    Pre-requisites:
+	Install easy_install: https://pypi.python.org/pypi/setuptools
+	Install homebrew: https://github.com/mxcl/homebrew
+	Install pip: sudo easy_install pip
+
+    Installing Django: sudo pip install Django (https://docs.djangoproject.com/en/dev/topics/install/)
+    Upgrading Django: Things go down south if you upgrade. I would recommend uninstalling existing version and then fresh installing new version of Django. Somethings that you might encounter as part of removal is that it might complain that Django already exist. 
+    	* Find the directory: python -c "import sys; sys.path = sys.path[1:]; import django; print(    django.__path__)"
+	* Remove it: sudo rm -rf <path you found above)
+	* Find egg file: python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
+	* Remove the Django* files 
+	* Open easy-install.pth and remove links to Django
+	* Save and close. 
+
+
+
